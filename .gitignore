@@ -1,0 +1,6 @@
+outputs/
+wandb/
+__pycache__/
+loaders/__pycache__/
+*.bin
+*.safetensors

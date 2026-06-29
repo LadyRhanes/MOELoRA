@@ -255,7 +255,7 @@ def main():
 
     if accelerator.is_main_process:
         import wandb
-        wandb.init(project=PROJECT_NAME, name=RUN_NAME, resume="allow")
+        wandb.init(project=PROJECT_NAME, name=RUN_NAME, resume="allow", entity="lady-rhanes")
 
     set_seed(SEED)
 
@@ -341,7 +341,7 @@ def main():
     moe_config.num_local_experts    = NUM_EXPERTS
     moe_config.output_router_logits = True
     moe_config.router_aux_loss_coef = ROUTER_AUX_COEF
-    moe_config.use_attention_lora   = False             # NEW: enable attention LoRA
+    moe_config.use_attention_lora   = True             # NEW: enable attention LoRA
 
     moe_model = LoraMoeModel(base_model, moe_config)
     moe_model.make_experts_trainable()

@@ -14,7 +14,7 @@ class TrainingConfig:
 
     # Training parameters
     SEED: int            = 42
-    NUM_EPOCHS: int      = 1
+    NUM_EPOCHS: int      = 3
     TRAIN_BATCH: int     = 24
     EVAL_BATCH: int      = 16
     CONTEXT_LENGTH: int  = 1024
@@ -38,5 +38,5 @@ class TrainingConfig:
     OUTPUT_DIR: str           = "./outputs/malora"
     NUM_CHECKPOINT_LIMIT: int = 2        # FIXED: was 3, keep more checkpoints for safety
     LOGDIR: str               = "./logs"
-    RUN_NAME: str             = "malora-run1"
+    RUN_NAME: str             = "10k-3ep-aton"
     PROJECT_NAME: str         = "malora"
