@@ -5,7 +5,7 @@ from typing import Optional
 
 @dataclass
 class CommitPackFTConfig:
-    min_samples    : int            = 4000
+    min_samples    : int            = 10000
     priority_langs : set            = field(default_factory=lambda: {"python", "java", "javascript", "cpp"})
     fmt_split      : tuple          = (0.6, 0.4)   # (code_edit, message_gen)
     lang_counts    : Optional[dict] = None
